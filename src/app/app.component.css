@@ -1,0 +1,47 @@
+h1{
+    background-color: blueviolet
+}
+ul.classUl{
+    display: inline-block;
+    color:blue;
+    font-size: larger;
+    text-decoration: none;
+    text-decoration-style: none;
+}
+ul.classUl >li{
+    display: inline-block;
+    color:rgb(173, 8, 88);
+    font-size: larger;
+    text-decoration: none;
+    text-decoration-style: none;
+    padding: 10px;
+}
+.classError{
+    color:red;
+
+}
+.classLarge{
+    font-size: 64px;
+}
+.classSuccess{
+    color:greenyellow;
+    background-color: blue;
+}
+
+.styleBlue{
+    color:blue;
+    font-size: 50px;
+    background-color: lightblue;
+}
+.styleRed{
+        color:red;
+    font-size: 50px;
+    background-color: lightcoral;
+
+}
+.styleGreen{
+    color:green;
+    font-size: 50px;
+    background-color: lightgreen;
+
+}
