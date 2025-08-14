@@ -1,0 +1,25 @@
+
+    <form clrForm [formGroup]="form">
+   <clr-alert *ngIf="open" [clrAlertType]="'success'" (clrAlertClosedChange)="onClose()">
+  <clr-alert-item>
+    <span class="alert-text" (click)="onClose()">{{msg}}</span>
+  </clr-alert-item>
+</clr-alert>
+  <clr-input-container>
+    <label>name</label>
+    <input placeholder="Full name" clrInput  formControlName="name" name="name" required />
+    <clr-control-error>This field is required!</clr-control-error>
+  </clr-input-container>
+    <clr-input-container>
+    <label>Adresse</label>
+    <input placeholder="Adresse" clrInput  formControlName="adresse" name="name" required />
+    <clr-control-error>This field is required!</clr-control-error>
+  </clr-input-container>
+  
+<clr-button-group>
+  <clr-button [disabled]="form.invalid" (click)="submit()">update</clr-button>
+  <clr-button (click)="form.reset()">reset</clr-button>
+ <clr-button routerLink="../../">back</clr-button>
+</clr-button-group>
+
+</form>

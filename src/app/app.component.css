@@ -45,3 +45,21 @@ ul.classUl >li{
     background-color: lightgreen;
 
 }
+.sucessInput{
+    color:green;
+    font-size: 23px;
+    border-radius: 10px;
+    border:solid 1px green;
+    width: 200px;
+    height: 30px;
+
+}
+.errorInput{
+    color:rgb(240, 8, 8);
+    font-size: 23px;
+    border-radius: 10px;
+    border:solid 1px rgb(237, 15, 15);
+    width: 200px;
+    height: 30px;
+
+}

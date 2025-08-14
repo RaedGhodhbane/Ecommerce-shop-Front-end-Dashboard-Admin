@@ -1,85 +1,12 @@
-<!-- <app-a></app-a> -->
-<!-- <button (click)="change()"> change Test </button> -->
-<!-- <ng-container *ngIf="test; else block3">
-<h1> start container </h1>
-<ng-container *ngTemplateOutlet="block2"></ng-container>
-<h1> end container </h1>
-</ng-container>
-<ng-template #block2>
-    <h1> hello block2 </h1>
-</ng-template>
-<ng-template #block3>
-    <h1> hello block3 </h1>
-</ng-template> -->
-<!-- <ng-container *ngIf="test; then block2 ; else block3">
-    <h1> hello container </h1>
-</ng-container>
-<ng-template #block2>
-    <h1> hello block2 </h1>
-</ng-template>
-<ng-template #block3>
-    <h1> hello block3 </h1>
-</ng-template> -->
-<!-- <ul>
-    <li *ngFor="let item of list; let i = index">
-        {{i+1}}. {{item}}
-    </li>
-</ul> -->
 
-<!-- <ul>
-    <li *ngFor="let item of list; let i=index">
-        <h2> name: {{item.name}} </h2>
-        <h2> age: {{item.age}} </h2>
-        <h2> city: {{item.city}} </h2>
-    </li>
-</ul>
-
-<button (click)="role='user'"> change role </button>
-
-<div [ngSwitch]="role">
-    <p *ngIf="role == 'admin'">hello adminnn !!! </p>
-    <h3 *ngSwitchCase="'admin'"> hello admin</h3>
-    <h3 *ngSwitchCase="'user'"> hello user</h3>
-    <h3 *ngSwitchCase="'guest'"> hello guest</h3>
-    <h3 *ngSwitchDefault> hello world </h3> -->
-
-
-<!-- </div> -->
-
-<!-- <h1 *ngIf="welcomeTest ;else blockElse"> {{greeting}} into my website </h1>
-<button (click)="change()"> change</button>
-<ng-template #blockElse>
-   <h1 > {{greeting }} into my website </h1> 
-</ng-template> -->
-<h1 *ngIf="welcomeTest then blockTrue ;else  blockFalse"> welcome  world </h1>
-<ng-template #blockTrue>
-    <h1 [ngStyle]="styleWelcome"> my first welcome </h1>
-</ng-template>
-
-<ng-template #blockFalse>
-    <h1  [ngStyle]="styleGoodbye"> say goodBye</h1>
-</ng-template>
-<h2 [ngStyle]="{color:welcomeTest?'red':'blue',  backgroundColor: welcomeTest?'greenyellow':'blueviolet'}"> example 2 </h2>
-<button (click)="change()"> change</button>
- <ul [ngClass]="classList">
-    <li> classeRoom:angular</li>
-    <li> application First </li>
- </ul>
- <div>
-    <h1 class=" classError classLarge classSuccess "> error classe large </h1>
-    <h1 [ngClass]="{'classError':isError,'classLarge':isLarge ,'classSuccess':isSuccess}"> error</h1>
-    <button (click)="changeClass()"> changeClasse</button>
- </div>
- 
-    <button (click)="changeRed()"> changeClasse Red</button>
-    <button (click)="changeBlue()"> changeClasse blue</button>
-    <button (click)="changeGreen()"> changeClasse Green</button>
-
- <div [ngSwitch]="color">
-    <p *ngSwitchCase="'red'"  [ngClass]="classRed">hello Red !!! </p>
-    <h3 *ngSwitchCase="'blue'" [ngClass]="classBlue"> hello blue</h3>
-    <h3 *ngSwitchCase="'green'"[ngClass]="classGreen"> hello Green</h3>
-    <h3 *ngSwitchDefault> hello world </h3> 
-
-
+<div class="main-container">
+ <app-header *ngIf="showMenu"></app-header>
+  <div class="content-container">
+    <clr-vertical-nav  *ngIf="showMenu" [clrVerticalNavCollapsible]="true" [clrVerticalNavCollapsed]="false">
+     <app-side-bar></app-side-bar>
+    </clr-vertical-nav>
+    <div class="content-area">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>
