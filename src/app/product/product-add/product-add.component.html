@@ -1,1 +1,67 @@
-<p>product-add works!</p>
+<form clrStepper [formGroup]="form" (ngSubmit)="submit()">
+  <clr-stepper-panel formGroupName="name">
+    <clr-step-title> Name and desciprion </clr-step-title>
+    <!-- <clr-step-description>Description goes here.</clr-step-description> -->
+    <clr-step-content *clrIfExpanded>
+      <clr-input-container>
+        <label>Name</label>
+        <input clrInput formControlName="name" />
+        <clr-control-error *clrIfError="'required'">First Name Required</clr-control-error>
+      </clr-input-container>
+
+      <clr-input-container>
+        <label> description</label>
+        <input clrInput formControlName="description" />
+        <clr-control-error *clrIfError="'required'">Last Name Required</clr-control-error>
+      </clr-input-container>
+
+      <button clrStepButton="next">next</button>
+    </clr-step-content>
+  </clr-stepper-panel>
+
+  <clr-stepper-panel formGroupName="categoryProvider">
+    <clr-step-title>Catgory provider</clr-step-title>
+    <clr-step-content *clrIfExpanded>
+      
+<clr-combobox-container>
+  <label> Category</label>
+  <clr-combobox formControlName="category" (clrSelectionChange)="select($event)" name="category" >
+    <clr-options>
+      <clr-option *clrOptionItems="let category of categoryList; field: 'categoryName'" [clrValue]="category">
+        <cds-icon shape="world" role="img" aria-label="World is turning"></cds-icon>
+        {{ category.categoryName }}
+        <cds-icon shape="sun" role="img" aria-label="Sun is shining"></cds-icon>
+      </clr-option>
+    </clr-options>
+  </clr-combobox>
+  <clr-control-helper>Helper text</clr-control-helper>
+  <clr-control-error>There was an error</clr-control-error>
+</clr-combobox-container>
+
+<clr-combobox-container>
+  <label> User</label>
+  <clr-combobox formControlName="provider" (clrSelectionChange)="selectUser($event)" name="user" >
+    <clr-options>
+      <clr-option *clrOptionItems="let user of userList; field: 'name'" [clrValue]="user">
+        <cds-icon shape="user" role="img" aria-label="World is turning"></cds-icon>
+      {{user.id}} . {{ user.name }} 
+      </clr-option>
+    </clr-options>
+  </clr-combobox>
+  <clr-control-helper>Helper text</clr-control-helper>
+  <clr-control-error>There was an error</clr-control-error>
+</clr-combobox-container>
+
+      <button clrStepButton="next">next</button>
+    </clr-step-content>
+  </clr-stepper-panel>
+
+  <clr-stepper-panel formGroupName="password">
+    <clr-step-title>Password</clr-step-title>
+    <clr-step-description>...</clr-step-description>
+    <clr-step-content *clrIfExpanded>
+      ...
+      <button clrStepButton="submit">submit</button>
+    </clr-step-content>
+  </clr-stepper-panel>
+</form>

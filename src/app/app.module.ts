@@ -7,11 +7,11 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { ClarityModule } from "@clr/angular";
 import { CoreModule } from './core/core.module';
 import '@cds/core/icon/register.js';
-import { boltIcon, bugIcon, bugIconName, certificateIcon, ClarityIcons, cogIcon, sadFaceIcon, shieldIcon, userIcon, vmBugIcon } from '@cds/core/icon';
+import { boltIcon, bugIcon, bugIconName, certificateIcon, ClarityIcons, cogIcon, sadFaceIcon, shieldIcon, sunIcon, userIcon, vmBugIcon, worldIcon } from '@cds/core/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
-ClarityIcons.addIcons(userIcon,boltIcon,sadFaceIcon,bugIcon,shieldIcon,certificateIcon,cogIcon,vmBugIcon);
+ClarityIcons.addIcons(userIcon,boltIcon,sadFaceIcon,bugIcon,shieldIcon,certificateIcon,cogIcon,vmBugIcon,worldIcon,sunIcon);
 @NgModule({
   declarations: [
     AppComponent,

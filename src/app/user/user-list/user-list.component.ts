@@ -11,8 +11,8 @@ export class UserListComponent  implements OnInit{
 dataUser: any;
 selected:any[]=[]
 trackUserItemById:any
-  toDeleted: any[]=[];
-  open: boolean=false;
+toDeleted: any[]=[];
+open: boolean=false;
 constructor(private userService:UserService ,  private router:Router){
 
 }
